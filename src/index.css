@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mirrored tokens from reference for design parity */
+@layer base {
+  :root {
+    --background: 246 248 250;
+    --foreground: 224 33% 9%;
+    --primary: 291 64% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 291 64% 38%;
+    --primary-light: 291 64% 95%;
+    --info: 187 71% 40%;
+    --info-foreground: 0 0% 100%;
+    --info-light: 187 71% 95%;
+    --success: 122 37% 56%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 122 37% 95%;
+    --warning: 36 74% 55%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 36 74% 95%;
+    --danger: 4 71% 62%;
+    --danger-foreground: 0 0% 100%;
+    --danger-light: 4 71% 95%;
+    --rose: 339 82% 51%;
+    --rose-foreground: 0 0% 100%;
+    --rose-light: 339 82% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 33% 9%;
+    --card-hover: 210 40% 99%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 33% 9%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 224 33% 9%;
+    --secondary-hover: 210 40% 92%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 224 33% 9%;
+    --destructive: 4 71% 62%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --input-focus: 291 64% 42%;
+    --ring: 291 64% 42%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 224 33% 9%;
+    --sidebar-primary: 291 64% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 291 64% 95%;
+    --sidebar-accent-foreground: 291 64% 42%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 291 64% 42%;
+    --navbar-background: 0 0% 100%;
+    --navbar-foreground: 224 33% 9%;
+    --navbar-border: 214 32% 91%;
+    --shadow-sm: 0 1px 2px 0 hsl(224 33% 9% / 0.05);
+    --shadow: 0 1px 3px 0 hsl(224 33% 9% / 0.1), 0 1px 2px -1px hsl(224 33% 9% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(224 33% 9% / 0.1), 0 2px 4px -2px hsl(224 33% 9% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(224 33% 9% / 0.1), 0 4px 6px -4px hsl(224 33% 9% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(224 33% 9% / 0.1), 0 8px 10px -6px hsl(224 33% 9% / 0.1);
+    --gradient-primary: linear-gradient(135deg, hsl(291 64% 42%), hsl(291 64% 52%));
+    --gradient-info: linear-gradient(135deg, hsl(187 71% 40%), hsl(187 71% 50%));
+    --gradient-success: linear-gradient(135deg, hsl(122 37% 56%), hsl(122 37% 66%));
+    --gradient-warning: linear-gradient(135deg, hsl(36 74% 55%), hsl(36 74% 65%));
+    --gradient-danger: linear-gradient(135deg, hsl(4 71% 62%), hsl(4 71% 72%));
+    --gradient-rose: linear-gradient(135deg, hsl(339 82% 51%), hsl(339 82% 61%));
+    --radius: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .dark {
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+    --primary: 291 64% 52%;
+    --primary-foreground: 224 33% 9%;
+    --primary-hover: 291 64% 48%;
+    --primary-light: 291 64% 10%;
+    --info: 187 71% 50%;
+    --info-light: 187 71% 10%;
+    --success: 122 37% 66%;
+    --success-light: 122 37% 10%;
+    --warning: 36 74% 65%;
+    --warning-light: 36 74% 10%;
+    --danger: 4 71% 72%;
+    --danger-light: 4 71% 10%;
+    --rose: 339 82% 61%;
+    --rose-light: 339 82% 10%;
+    --card: 222 84% 7%;
+    --card-foreground: 210 40% 98%;
+    --card-hover: 222 84% 9%;
+    --popover: 222 84% 7%;
+    --popover-foreground: 210 40% 98%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 217 33% 20%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --input-focus: 291 64% 52%;
+    --ring: 291 64% 52%;
+    --sidebar-background: 222 84% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 291 64% 52%;
+    --sidebar-primary-foreground: 224 33% 9%;
+    --sidebar-accent: 291 64% 15%;
+    --sidebar-accent-foreground: 291 64% 70%;
+    --sidebar-border: 217 33% 17%;
+    --navbar-background: 222 84% 7%;
+    --navbar-foreground: 210 40% 98%;
+    --navbar-border: 217 33% 17%;
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.3), 0 1px 2px -1px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -4px hsl(0 0% 0% / 0.3);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.3), 0 8px 10px -6px hsl(0 0% 0% / 0.3);
+  }
+}
+
+* {
+  @apply border-border;
+}
+html, body, #root { height: 100%; }
+body { @apply bg-background text-foreground; font-family: var(--font-body); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; line-height: 1.25; }
+
+
